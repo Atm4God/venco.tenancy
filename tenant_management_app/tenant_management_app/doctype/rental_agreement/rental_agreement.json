@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RAG.######",
+ "creation": "2023-05-18 14:42:42.659131",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "house",
+  "start_date",
+  "end_date",
+  "agent",
+  "rent_amount",
+  "tc",
+  "lease_term_count",
+  "property_description",
+  "security_deposit",
+  "is_active",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "house",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "House",
+   "options": "House",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agent",
+   "options": "Agent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Float",
+   "label": "Rent Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tc",
+   "fieldtype": "Attach",
+   "label": "Terms and Condition"
+  },
+  {
+   "fieldname": "lease_term_count",
+   "fieldtype": "Int",
+   "label": "Lease Term count",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_description",
+   "fieldtype": "Text Editor",
+   "label": "Property Description"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Float",
+   "label": "Security Deposit"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Currently Active",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Agreement",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-05-23 22:34:58.643751",
+ "modified_by": "Administrator",
+ "module": "Tenant Management App",
+ "name": "Rental Agreement",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "House Owner",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "House Agent",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
