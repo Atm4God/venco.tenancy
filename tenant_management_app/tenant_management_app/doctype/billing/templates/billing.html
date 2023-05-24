@@ -1,0 +1,54 @@
+{#{% extends "templates/web.html" %}#}
+{##}
+{#{% block page_content %}#}
+{#<h1>{{ title }}</h1>#}
+{#{% endblock %}#}
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+    <div class="py-20 row">
+
+        <div class="col">
+
+            <img alt="{{ house.name }}" src="{{ house.image }}">
+
+        </div>
+
+        <div class="col">
+
+            <h1 class="mt-0">{{ doc.name }}</h1>
+
+            <p class="lead">Billing created by {{ doc.owner }}</p>
+
+            <div>
+                {%- if status == 'Cleared' -%}
+
+                    <span class="badge badge-success">Cleared</span>
+                {%- elif status == 'Uncleared' -%}
+
+                    <span class="badge badge-primary">Uncleared</span>
+
+                {%- endif -%}
+            </div>
+
+            <div class="mt-4">
+
+                <div>Tenant: <strong>{{ tenant.first_name }} {{ tenant.last_name }}</strong></div>
+
+                <div>Rental Period: <strong>{{ rental_period }}</strong></div>
+
+                <div>Rental Amount: <strong>{{ rent_amount }}</strong></div>
+
+                <div>Agency Fee: <strong>{{ agency_fee }}</strong></div>
+
+                <div>Total Amount: <strong>{{ total_amount }}</strong></div>
+            </div>
+
+                <div>Payment Due Date: <strong>{{ payment_due_date }}</strong></div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
