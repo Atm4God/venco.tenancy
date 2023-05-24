@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HSE-.######",
+ "creation": "2023-05-18 14:15:43.395070",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "image",
+  "number_of_bedrooms",
+  "number_of_bathrooms",
+  "house_address",
+  "tiled",
+  "has_waldrobe",
+  "rent_amount",
+  "house_owner",
+  "house_ratings",
+  "rent_type",
+  "amended_from",
+  "status",
+  "security_fee",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "house_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "House Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_bedrooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Bedrooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_bathrooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Bathrooms",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "tiled",
+   "fieldtype": "Check",
+   "label": "Is Tiled"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_waldrobe",
+   "fieldtype": "Check",
+   "label": "Has Waldrobe"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rent Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "house_owner",
+   "fieldtype": "Link",
+   "label": "House Owner",
+   "options": "House Owner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "house_ratings",
+   "fieldtype": "Rating",
+   "label": "House Ratings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "House",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nUnavailable"
+  },
+  {
+   "fieldname": "security_fee",
+   "fieldtype": "Float",
+   "label": "Security Fee"
+  },
+  {
+   "fieldname": "rent_type",
+   "fieldtype": "Select",
+   "label": "Rent Type",
+   "options": "Monthly\nYearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2023-05-24 19:01:42.211386",
+ "modified_by": "Administrator",
+ "module": "Tenant Management App",
+ "name": "House",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "House Owner",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
